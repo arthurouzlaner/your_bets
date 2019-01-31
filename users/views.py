@@ -1,3 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def details_view(request, *args, **kwargs):
+    users = {
+        "arthur": "panther",
+        "itamar": "lo chef"
+    }
+    return render(request, "user_details.html", users)

@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from tournaments.views import hompage_view, tournaments_view
+from users.views import details_view
+
 
 urlpatterns = [
     path('', hompage_view, name='home'),
-    path('tournaments', tournaments_view, name='tournaments'),
+    path('tournaments/', tournaments_view, name='tournaments'),
     path('admin/', admin.site.urls),
+    path('user_details/', details_view),
 ]
