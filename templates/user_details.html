@@ -2,8 +2,8 @@
 
 {% block body %}
 <h1>users page</h1>
-    <p1>Arthur: {{ arthur }}</p1>
-    <br>
-    <p1>Itamar: {{ itamar }}</p1>
+    {% for user in users %}
+        <h1>{{user}}</h1>
+    {% endfor %}
 {% endblock %}
 
