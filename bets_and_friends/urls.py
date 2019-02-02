@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from tournaments.views import hompage_view, tournaments_view
 from users.views import details_view
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
 urlpatterns = [
@@ -25,3 +26,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('user_details/', details_view),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
