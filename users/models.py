@@ -6,5 +6,6 @@ class PersonalData(models.Model):
     nickname = models.CharField(max_length=120)
     email = models.EmailField()
     image = models.ImageField(blank=True)
-    def __str__ (self):
+
+    def __str__(self):
         return ", ".join([self.name, self.nickname, self.email])

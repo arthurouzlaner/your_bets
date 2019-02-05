@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from tournaments.views import hompage_view, tournaments_view
-from users.views import details_view
+from users.views import details_view, user_creation_view
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
@@ -24,6 +24,7 @@ urlpatterns = [
     path('', hompage_view, name='home'),
     path('tournaments/', tournaments_view, name='tournaments'),
     path('admin/', admin.site.urls),
+    path('add_user/', user_creation_view),
     path('user_details/', details_view),
 ]
 
