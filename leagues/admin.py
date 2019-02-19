@@ -1,8 +1,6 @@
 from django.contrib import admin
 
-from leagues.models import LeagueType,LeageStage,LeageRound,LeagueGame
+from leagues.models import LeagueType,LeagueGame
 
 admin.site.register(LeagueType)
-admin.site.register(LeageStage)
-admin.site.register(LeageRound)
 admin.site.register(LeagueGame)
