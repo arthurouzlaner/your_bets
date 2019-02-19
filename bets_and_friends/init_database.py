@@ -1,6 +1,6 @@
 def create_db():
     from leagues.models import LeagueType,LeagueGame
-    from tournaments.models import subTournament,Tournament
+    from tournaments.models import SubTournament,Tournament
     from users.models import PersonalData
     from datetime import datetime
 
@@ -24,8 +24,8 @@ def create_db():
     Tournament.objects.create(name="Testing Tournament", description="Tournament created for site testing", subtournament_id_list="{[1,2]}", admin_id=0)
 
     ## Create sub tournament
-    subTournament.objects.create(league_id=1, rules_id_list="{[1]}")
-    subTournament.objects.create(league_id=2, rules_id_list="{[1]}")
+    SubTournament.objects.create(league_id=1, rules_id_list="{[1]}")
+    SubTournament.objects.create(league_id=2, rules_id_list="{[1]}")
 
     ## Create user
     PersonalData.objects.create(name="Jane", nickname="JohnDoe", email="sirozen9@gmail.com")
