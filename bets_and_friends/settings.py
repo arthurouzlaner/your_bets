@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'tournaments',
     'users',
     'leagues',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
