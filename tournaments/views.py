@@ -6,3 +6,6 @@ def hompage_view(*args, **kwargs):
 
 def tournaments_view(*args, **kwargs):
     return HttpResponse("<h1>Tournaments</h1>")
+
+def scoreboard_view(request, *args, **kwargs):
+    return render(request, "scoreboard.html", {})

@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from tournaments.views import hompage_view, tournaments_view
+from tournaments.views import hompage_view, tournaments_view, scoreboard_view
+from leagues.views import league_view
 from users.views import details_view, user_creation_view, user_edit_view
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
@@ -23,6 +24,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path('', hompage_view, name='home'),
     path('tournaments/', tournaments_view, name='tournaments'),
+    path('scoreboard/', scoreboard_view),
+    path('league/', league_view),
     path('admin/', admin.site.urls),
     path('users/add/', user_creation_view),
     path('users/<int:id>/', user_edit_view),
@@ -31,3 +34,5 @@ urlpatterns = [
 ]
 
 urlpatterns += staticfiles_urlpatterns()
+
+print("hello world")

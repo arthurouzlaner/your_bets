@@ -1,6 +1,6 @@
 def create_db():
-    from leagues.models import LeagueType,LeagueGame
-    from tournaments.models import SubTournament,Tournament
+    from leagues.models import LeagueType, LeagueGame
+    from tournaments.models import SubTournament, Tournament
     from users.models import PersonalData
     from datetime import datetime
 
